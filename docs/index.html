@@ -17,7 +17,7 @@
 <body>
     <nav>
         <div id="ruins" class="nav-dropdown">
-            <h2 class="nav-text">Ruins</h2>
+            <h3 class="nav-text">Ruins</h3>
             <div class="nav-dropdown-content">
                 <a href="#">Ruins</a>
                 <a href="#">Ruins</a>
@@ -25,7 +25,7 @@
             </div>
         </div>
         <div id="museums" class="nav-dropdown">
-            <h2 class="nav-text">Museums</h2>
+            <h3 class="nav-text">Museums</h3>
             <div class="nav-dropdown-content">
                 <a href="#">Ruins</a>
                 <a href="#">Ruins</a>
@@ -33,7 +33,7 @@
             </div>
         </div>
         <div id="other" class="nav-dropdown">
-            <h2 class="nav-text">Other Attractions</h2>
+            <h3 class="nav-text">Other Attractions</h3>
             <div class="nav-dropdown-content">
                 <a href="#">Ruins</a>
                 <a href="#">Ruins</a>
@@ -41,12 +41,85 @@
             </div>
         </div>
         <a class="nav-link">
-            <h2 class="nav-text">Events</h2>
+            <h3 class="nav-text">Events</h3>
         </a>
         <a class="nav-link">
-            <h2 class="nav-text">Culture</h2>
+            <h3 class="nav-text">Culture</h3>
         </a>
     </nav>
+    <div class="grey-bar"></div>
+    <header>
+        <div id="carousel">
+            <span class="switch-button left" onclick="prev();">
+                &#10094;
+            </span>
+            <span class="switch-button right" onclick="next();">
+                &#10095;
+            </span>
+        </div>
+        <h1>Nîmes, France</h1>
+    </header>
+    <div class="grey-bar"></div>
+    <hr>
+    <div class="split-left">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Aqueduct_%28PSF%29.png" alt="Ampitheater">
+        <p class="desc">
+            Nîmes is a beautiful, historic city in the South of France. Dating back to the Roman Empire, Nîmes is filled with ancient Roman ruins. Nîmes is also known for its famous museums and its unique architecture. Nîmes is a city of art, culture and history,
+            but is also known for its wines and nightlife
+        </p>
+    </div>
+    <hr>
+    <h2>
+        Popular Attractions
+    </h2>
+    <section id="attractions">
+        <div class="attraction">
+            <h3>Pont du Gard</h3>
+            <img src="./assets/pontdugard.jpg" alt="Pont du Gard">
+        </div>
+        <div class="attraction">
+            <h3>Epic Museum</h3>
+        </div>
+        <div class="attraction">
+            <h3>Winery</h3>
+        </div>
+    </section>
+    <script>
+        var currentIndex = 0;
+        var carousel = document.getElementById("carousel");
+        var images = [{
+            img: "./assets/carousel1.jpg",
+            desc: "A ruin"
+        }, {
+            img: "./assets/carousel2.jpg",
+            desc: "A town"
+        }, {
+            img: "./assets/carousel3.jpeg",
+            desc: "A bridge"
+        }];
+
+        function setImage(index) {
+            carousel.style.backgroundImage = "url(" + images[index].img + ")";
+
+        }
+
+        function next() {
+            currentIndex++;
+            if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+            setImage(currentIndex);
+        }
+
+        function prev() {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1;
+            }
+            setImage(currentIndex);
+        }
+        setImage(currentIndex);
+    </script>
 </body>
 
 </html>

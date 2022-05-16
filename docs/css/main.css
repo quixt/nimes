@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Noto Serif';
+    src: url('../fonts/NotoSerif-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('../fonts/Mulish-VariableFont_wght.ttf');
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -5,4 +15,9 @@ body {
 
 * {
     box-sizing: border-box;
+}
+
+:root {
+    --nav-color-one: #2a8cc9;
+    --nav-color-one: #257cb3;
 }

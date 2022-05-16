@@ -1,0 +1,135 @@
+header {
+    width: 100%;
+    height: 50vh;
+    background-color: transparent;
+    text-align: center;
+    padding-top: 17vh;
+    position: relative;
+}
+
+body {
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    font-size: 12vh;
+    font-family: 'Noto Serif';
+    z-index: 10000;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(90%);
+}
+
+header:hover .switch-button {
+    opacity: 1;
+}
+
+.switch-button {
+    display: block;
+    position: absolute;
+    color: white;
+    top: 20vh;
+    font-size: 4vh;
+    opacity: 0;
+    transition: 0.3s opacity ease-in;
+    cursor: pointer;
+}
+
+.left {
+    left: 1vw;
+}
+
+.right {
+    right: 1vw;
+}
+
+.grey-bar {
+    width: 100%;
+    height: 1vh;
+    background-color: rgb(200, 200, 200);
+}
+
+.blue-bar {
+    width: 100%;
+    height: 1vh;
+    background-color: #4781a5;
+}
+
+.desc {
+    font-family: "Noto Serif", serif;
+    width: 100%;
+    text-align: center;
+    margin: 5vh auto;
+    font-size: 2vh;
+    line-height: 5vh;
+}
+
+.split-left {
+    display: grid;
+    grid-template-columns: 20% 50%;
+    margin-left: 15%;
+    margin-top: 5vh;
+}
+
+.split-left img {
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    margin-top: 5vh;
+    font-size: 8vh;
+    font-family: "Noto Serif", serif;
+}
+
+#attractions {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin: 5vh 0;
+}
+
+.attraction {
+    width: 20vw;
+    height: 40vh;
+    position: relative
+}
+
+.attraction h3 {
+    font-family: "Noto Serif";
+    font-size: 3vh;
+    position: relative;
+    z-index: 1;
+}
+
+hr {
+    border: none;
+    width: 20%;
+    border-top: 4px dotted #4781a5;
+}
+
+.attraction img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    border-radius: 2vh;
+    border: 1px solid rgb(231, 231, 231);
+}
