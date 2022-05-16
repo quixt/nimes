@@ -1,0 +1,21 @@
+:root {
+    -nav-color-one: #f5f5f5;
+    -nav-color-one: #f5f5f5;
+}
+
+nav {
+    display: flex;
+}
+
+.nav-dropdown,
+.nav-link {
+    width: 20%;
+    height: 10vh;
+    background-color: red;
+    text-align: center;
+    font-size: 2vh;
+}
+
+.nav-dropdown .nav-dropdown-content {
+    display: none;
+}
