@@ -4,7 +4,6 @@ nav {
 
 .nav-dropdown,
 .nav-link {
-    cursor: pointer;
     width: 20%;
     height: 8vh;
     background-color: white;
@@ -30,6 +29,30 @@ nav {
     background-size: 100% 3px;
 }
 
+.nav-dropdown-content a {
+    display: block;
+    color: #2b2b2b;
+    text-decoration: none;
+    background-image: linear-gradient( #2a8cc9, #257cb3);
+    background-size: 0% 1.5px;
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    transition: background-size 0.3s ease-in-out;
+    font-family: "Mulish", sans-serif;
+    font-size: 2vh;
+    width: fit-content;
+    margin: 3vh auto;
+}
+
+.nav-dropdown-content a:hover {
+    background-size: 100% 1.5px;
+}
+
+.nav-dropdown-content .info {
+    display: block;
+    width: 100%;
+}
+
 .nav-link:hover>.nav-text {
     background-size: 100% 3px;
 }
@@ -44,18 +67,25 @@ nav {
 
 .nav-link:hover {
     background-color: rgb(243, 243, 243);
+    cursor: pointer;
 }
 
 .nav-dropdown:hover>.nav-dropdown-content {
-    display: block;
+    visibility: visible;
 }
 
 .nav-dropdown .nav-dropdown-content {
-    display: none;
+    visibility: hidden;
     position: absolute;
-    background-color: green;
-    z-index: 20;
-    height: 20vh;
+    background-color: rgb(243, 243, 243);
+    z-index: 50;
+    height: 40vh;
     top: 8vh;
     width: 100%;
+    padding-top: 2vh;
+}
+
+.nav-split {
+    display: grid;
+    grid-template-columns: 50% 50%;
 }

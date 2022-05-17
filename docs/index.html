@@ -18,10 +18,21 @@
     <nav>
         <div id="ruins" class="nav-dropdown">
             <h3 class="nav-text">Ruins</h3>
-            <div class="nav-dropdown-content">
-                <a href="#">Ruins</a>
-                <a href="#">Ruins</a>
-                <a href="#">Ruins</a>
+            <div class="nav-dropdown-content nav-split">
+                <div class="list">
+                    <a href="ruins/maison-carree" onmouseover="setDesc(this);" data-src="./assets/arena.jpg" data-desc="A Roman ampitheatre built in the second century BCE, it is one of the best preserved in the world.">Arena of Nîmes</a>
+                    <a href="ruins/arena" onmouseover="setDesc(this);" data-src="./assets/maisoncarree.jpeg" data-desc="The Maison Carrée is the most well-kept Roman temple in France. Created long ago, it is beautiful and a prime example of Vitruvian artwork. ">Maison Carrée
+                </a>
+                    <a href="ruins/pont-du-gard" onmouseover="setDesc(this);" data-src="./assets/pontdugard2.jpg" data-desc="The Pont du Gard is a beautiful and well-preserved Roman aqueduct from long ago.  The aqueduct has been graffitied by Napoleon's army.">Pont du Gard</a>
+                </div>
+                <div class="info">
+                    <section>
+                        <img class="info-img" src="">
+                        <p class="info-desc">
+
+                        </p>
+                    </section>
+                </div>
             </div>
         </div>
         <div id="museums" class="nav-dropdown">
@@ -103,6 +114,16 @@
 
         }
 
+        function timer() {
+            currentIndex++;
+            if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+            setImage(currentIndex);
+
+            setTimeout(timer, 6000);
+        }
+
         function next() {
             currentIndex++;
             if (currentIndex >= images.length) {
@@ -118,7 +139,23 @@
             }
             setImage(currentIndex);
         }
+        var info = document.getElementsByClassName("info")[0];
+        var desc = info.querySelector(".info-desc");
+        var sec = info.querySelector("section");
+        var descImg = info.querySelector(".info-img");
+
+        function setDesc(el) {
+            sec.style.display = "block";
+            desc.innerHTML = el.getAttribute("data-desc");
+            descImg.src = el.getAttribute("data-src");
+        }
+
+        function empty() {
+            info.style.display = "none";
+        }
+
         setImage(currentIndex);
+        setTimeout(timer, 6000);
     </script>
 </body>
 
