@@ -20,8 +20,8 @@
             <h3 class="nav-text">Ruins</h3>
             <div class="nav-dropdown-content nav-split">
                 <div class="list">
-                    <a href="ruins/maison-carree" onmouseover="setDesc(this);" data-src="./assets/arena.jpg" data-desc="A Roman ampitheatre built in the second century BCE, it is one of the best preserved in the world.">Arena of Nîmes</a>
-                    <a href="ruins/arena" onmouseover="setDesc(this);" data-src="./assets/maisoncarree.jpeg" data-desc="The Maison Carrée is the most well-kept Roman temple in France. Created long ago, it is beautiful and a prime example of Vitruvian artwork. ">Maison Carrée
+                    <a href="ruins/arena.html" onmouseover="setDesc(this);" data-src="./assets/arena.jpg" data-desc="A Roman ampitheatre built in the second century BCE, it is one of the best preserved in the world.">Arena of Nîmes</a>
+                    <a href="ruins/maison-carree.html" onmouseover="setDesc(this);" data-src="./assets/maisoncarree.jpeg" data-desc="The Maison Carrée is the most well-kept Roman temple in France. Created long ago, it is beautiful and a prime example of Vitruvian artwork. ">Maison Carrée
                 </a>
                     <a href="ruins/pont-du-gard" onmouseover="setDesc(this);" data-src="./assets/pontdugard2.jpg" data-desc="The Pont du Gard is a beautiful and well-preserved Roman aqueduct from long ago.  The aqueduct has been graffitied by Napoleon's army.">Pont du Gard</a>
                 </div>
@@ -71,15 +71,15 @@
         <h1>Nîmes, France</h1>
     </header>
     <div class="grey-bar"></div>
-    <hr>
+    <div class="hr"></div>
     <div class="split-left">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Aqueduct_%28PSF%29.png" alt="Ampitheater">
+        <img src="./assets/Aqueduct.png" class="pr" alt="Aqueduct lineart">
         <p class="desc">
             Nîmes is a beautiful, historic city in the South of France. Dating back to the Roman Empire, Nîmes is filled with ancient Roman ruins. Nîmes is also known for its famous museums and its unique architecture. Nîmes is a city of art, culture and history,
             but is also known for its wines and nightlife
         </p>
     </div>
-    <hr>
+    <div class="hr"></div>
     <h2>
         Popular Attractions
     </h2>
@@ -87,12 +87,17 @@
         <div class="attraction">
             <h3>Pont du Gard</h3>
             <img src="./assets/pontdugard.jpg" alt="Pont du Gard">
+            <button class="learn-more" data-href="ruins/pont-du-gard">Learn More</button>
         </div>
         <div class="attraction">
-            <h3>Epic Museum</h3>
+            <h3>Musée de la Romanité</h3>
+            <img src="./assets/musee.jpg" alt="Musée de la Romanité">
+            <button class="learn-more" data-href="museums/musee-romanite">Learn More</button>
         </div>
         <div class="attraction">
-            <h3>Winery</h3>
+            <h3>Costières de Nîmes</h3>
+            <img src="./assets/wine.jpg" alt="Costières de Nîmes wine">
+            <button class="learn-more" data-href="attractions#wineries">Learn More</button>
         </div>
     </section>
     <script>
@@ -105,7 +110,10 @@
             img: "./assets/carousel2.jpg",
             desc: "A town"
         }, {
-            img: "./assets/carousel3.jpeg",
+            img: "./assets/carousel3.jpg",
+            desc: "A bridge"
+        }, {
+            img: "./assets/carousel4.jpg",
             desc: "A bridge"
         }];
 
@@ -139,24 +147,23 @@
             }
             setImage(currentIndex);
         }
-        var info = document.getElementsByClassName("info")[0];
-        var desc = info.querySelector(".info-desc");
-        var sec = info.querySelector("section");
-        var descImg = info.querySelector(".info-img");
 
-        function setDesc(el) {
-            sec.style.display = "block";
-            desc.innerHTML = el.getAttribute("data-desc");
-            descImg.src = el.getAttribute("data-src");
-        }
-
-        function empty() {
-            info.style.display = "none";
-        }
 
         setImage(currentIndex);
         setTimeout(timer, 6000);
     </script>
+    <script src="./js/info.js"></script>
+    <footer>
+        <section>
+            <h4>Contact Us:</h4>
+            <p>
+                <strong>Phone: </strong>(206) - 490 - 1984<br>
+                <strong>Email: </strong><span style="cursor:pointer; text-decoration: underline;" data-href="mailto:info@travelnimes.com">info@travelnimes.com</span><br>
+                <strong>Sign up for the Weekly Newspaper: </strong><input placeholder="yourname@gmail.com" type="text"><button style="font-family:'Mulish', sans-serif; background-color:limegreen; margin-left:10px; color:white; border:none; padding:5px; cursor:pointer; border-radius:5px;">Sign Up</button>
+            </p>
+        </section>
+    </footer>
+    <script src="./js/data_href.js"></script>
 </body>
 
 </html>

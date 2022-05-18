@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to Nîmes</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/ruins.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/nav.css">
+
+</head>
+
+<body>
+    <nav>
+        <div id="ruins" class="nav-dropdown">
+            <h3 class="nav-text">Ruins</h3>
+            <div class="nav-dropdown-content nav-split">
+                <div class="list">
+                    <a href="/ruins/arena.html" onmouseover="setDesc(this);" data-src="../assets/arena.jpg" data-desc="A Roman ampitheatre built in the second century BCE, it is one of the best preserved in the world.">Arena of Nîmes</a>
+                    <a href="/ruins/maison-carree.html" onmouseover="setDesc(this);" data-src="../assets/maisoncarree.jpeg" data-desc="The Maison Carrée is the most well-kept Roman temple in France. Created long ago, it is beautiful and a prime example of Vitruvian artwork. ">Maison Carrée
+                </a>
+                    <a href="/ruins/pont-du-gard.html" onmouseover="setDesc(this);" data-src="../assets/pontdugard2.jpg" data-desc="The Pont du Gard is a beautiful and well-preserved Roman aqueduct from long ago.  The aqueduct has been graffitied by Napoleon's army.">Pont du Gard</a>
+                </div>
+                <div class="info">
+                    <section>
+                        <img class="info-img" src="">
+                        <p class="info-desc">
+
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div id="museums" class="nav-dropdown">
+            <h3 class="nav-text">Museums</h3>
+            <div class="nav-dropdown-content">
+                <a href="#">Ruins</a>
+                <a href="#">Ruins</a>
+                <a href="#">Ruins</a>
+            </div>
+        </div>
+        <div id="other" class="nav-dropdown">
+            <h3 class="nav-text">Other Attractions</h3>
+            <div class="nav-dropdown-content">
+                <a href="#">Ruins</a>
+                <a href="#">Ruins</a>
+                <a href="#">Ruins</a>
+            </div>
+        </div>
+        <a class="nav-link">
+            <h3 class="nav-text">Events</h3>
+        </a>
+        <a class="nav-link">
+            <h3 class="nav-text">Culture</h3>
+        </a>
+    </nav>
+    <div class="grey-bar"></div>
+    <header>
+        <div class="dark"></div>
+        <h1>Arena of Nîmes</h1>
+    </header>
+    <div class="grey-bar"></div>
+
+    <section class="info-split">
+        <section>
+            <div id="carousel">
+                <span class="switch-button left" onclick="prev();">
+                    &#10094;
+                </span>
+                <span class="switch-button right" onclick="next();">
+                    &#10095;
+                </span>
+            </div>
+        </section>
+        <section>
+            <p class="desc">
+                Roman amphitheatres first appeared in Southern Italy in the second century BCE and were specifically designed for putting on spectacular combats between gladiators or animal fights, this new type of construction took the form of two theatres set face
+                to face with an oval arena which allowed everyone, wherever they were sitting, to see the spectacles being acted out in the sand covering below, without danger of missing anything.
+
+
+            </p>
+            <div class="hr"></div>
+            <p class="desc">
+                The Arena of Nîmes was built in the second century BCE, it is one of the best preserved in the world. Originallty built for entertainment, it was later repurposed as a fortess and withstood many sieges.</p>
+            <div class="prices">
+                <h4>Tickets:</h4> Full Price: <span class="price">10€</span> | 7-17 Years Old: <span class="price">5€</span>
+                <h4>Parking:</h4> <span class="price">Inapplicable</span>
+                <h4>Wait Time:</h4> <span class="price">Fast</span>
+            </div>
+        </section>
+    </section>
+    <script src="../js/info.js"></script>
+    <script>
+        var currentIndex = 0;
+        var carousel = document.getElementById("carousel");
+        var images = ["arena1.jpg", "arena2.jpg", "arena3.jpg", "arena4.jpg"];
+
+        function setImage(index) {
+            carousel.style.backgroundImage = "url(" + "../assets/" + images[index] + ")";
+
+        }
+
+        function timer() {
+            currentIndex++;
+            if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+            setImage(currentIndex);
+
+            setTimeout(timer, 6000);
+        }
+
+        function next() {
+            currentIndex++;
+            if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+            setImage(currentIndex);
+        }
+
+        function prev() {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1;
+            }
+            setImage(currentIndex);
+        }
+
+
+        setImage(currentIndex);
+        setTimeout(timer, 6000);
+    </script>
+    <footer>
+        <section>
+            <h4>Contact Us:</h4>
+            <p>
+                <strong>Phone: </strong>(206) - 490 - 1984<br>
+                <strong>Email: </strong><span style="cursor:pointer; text-decoration: underline;" data-href="mailto:info@travelnimes.com">info@travelnimes.com</span><br>
+                <strong>Sign up for the Weekly Newspaper: </strong><input type="text" placeholder="yourname@gmail.com"><button style="font-family:'Mulish', sans-serif; background-color:limegreen; margin-left:10px; color:white; border:none; padding:5px; cursor:pointer; border-radius:5px;">Sign Up</button>
+            </p>
+        </section>
+    </footer>
+    <script src="./js/data_href.js"></script>
+</body>
+
+</html>
