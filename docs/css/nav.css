@@ -40,8 +40,17 @@ nav {
     transition: background-size 0.3s ease-in-out;
     font-family: "Mulish", sans-serif;
     font-size: 2vh;
-    width: fit-content;
+    max-width: 80%;
     margin: 3vh auto;
+    cursor: pointer;
+}
+
+.nav-dropdown-content a:nth-child(1) {
+    margin-top: 0;
+}
+
+.nav-dropdown-content a:last-child {
+    margin-top: 3vh;
 }
 
 .nav-dropdown-content a:hover {
@@ -88,4 +97,8 @@ nav {
 .nav-split {
     display: grid;
     grid-template-columns: 50% 50%;
+}
+
+.list {
+    height: 100%;
 }

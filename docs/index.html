@@ -15,6 +15,9 @@
 </head>
 
 <body>
+    <section id="logo">
+        <img src="./assets/logo.png" alt="Travel Nimes Logo" data-href="/">
+    </section>
     <nav>
         <div id="ruins" class="nav-dropdown">
             <h3 class="nav-text">Ruins</h3>
@@ -23,7 +26,7 @@
                     <a href="ruins/arena.html" onmouseover="setDesc(this);" data-src="./assets/arena.jpg" data-desc="A Roman ampitheatre built in the second century BCE, it is one of the best preserved in the world.">Arena of Nîmes</a>
                     <a href="ruins/maison-carree.html" onmouseover="setDesc(this);" data-src="./assets/maisoncarree.jpeg" data-desc="The Maison Carrée is the most well-kept Roman temple in France. Created long ago, it is beautiful and a prime example of Vitruvian artwork. ">Maison Carrée
                 </a>
-                    <a href="ruins/pont-du-gard" onmouseover="setDesc(this);" data-src="./assets/pontdugard2.jpg" data-desc="The Pont du Gard is a beautiful and well-preserved Roman aqueduct from long ago.  The aqueduct has been graffitied by Napoleon's army.">Pont du Gard</a>
+                    <a href="ruins/pont-du-gard.html" onmouseover="setDesc(this);" data-src="./assets/pontdugard2.jpg" data-desc="The Pont du Gard is a beautiful and well-preserved Roman aqueduct from long ago.  The aqueduct has been graffitied by Napoleon's army.">Pont du Gard</a>
                 </div>
                 <div class="info">
                     <section>
@@ -37,10 +40,23 @@
         </div>
         <div id="museums" class="nav-dropdown">
             <h3 class="nav-text">Museums</h3>
-            <div class="nav-dropdown-content">
-                <a href="#">Ruins</a>
-                <a href="#">Ruins</a>
-                <a href="#">Ruins</a>
+            <div class="nav-dropdown-content nav-split">
+                <div class="list">
+                    <a href="museums/musee-romanite.html" onmouseover="setDesc2(this);" data-src="./assets/museeromanite.jpg" data-desc="A newly opened modern museum showcasing old Roman artifacts.">Musée de la Romanité</a>
+                    <a href="museums/musee-beaux.html" onmouseover="setDesc2(this);" data-src="./assets/museeb.jpg" data-desc="An art museum containing busts, paintings, and more from a private collection, stored in a stunningly beautiful house designed for it.">Musée des Beaux-Arts
+
+
+                    </a>
+                    <a href="museums/carre-d-art.html" onmouseover="setDesc2(this);" data-src="./assets/musee-carree.jpg" data-desc="A museum displaying contemprary French art right across from the Maison Carrée, this is a must see for any art lover.">Carré d'Art</a>
+                </div>
+                <div class="info">
+                    <section>
+                        <img class="info-img" src="">
+                        <p class="info-desc">
+
+                        </p>
+                    </section>
+                </div>
             </div>
         </div>
         <div id="other" class="nav-dropdown">
@@ -87,12 +103,12 @@
         <div class="attraction">
             <h3>Pont du Gard</h3>
             <img src="./assets/pontdugard.jpg" alt="Pont du Gard">
-            <button class="learn-more" data-href="ruins/pont-du-gard">Learn More</button>
+            <button class="learn-more" data-href="ruins/pont-du-gard.html">Learn More</button>
         </div>
         <div class="attraction">
             <h3>Musée de la Romanité</h3>
             <img src="./assets/musee.jpg" alt="Musée de la Romanité">
-            <button class="learn-more" data-href="museums/musee-romanite">Learn More</button>
+            <button class="learn-more" data-href="museums/musee-romanite.html">Learn More</button>
         </div>
         <div class="attraction">
             <h3>Costières de Nîmes</h3>

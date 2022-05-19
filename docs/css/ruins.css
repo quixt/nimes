@@ -1,5 +1,4 @@
 header {
-    background-image: url("../assets/carousel1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -76,16 +75,16 @@ header {
 }
 
 .desc {
-    width: 80%;
+    width: 100%;
     margin: 0;
     font-family: "Mulish", serif;
     text-align: justify;
-    line-height: 2.5vh;
+    line-height: 3vh;
     padding: 0 2vw;
 }
 
 .prices {
-    width: 80%;
+    width: 100%;
     padding: 10px;
     background-color: rgb(227, 227, 227);
     height: fit-content;
