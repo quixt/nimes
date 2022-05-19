@@ -89,6 +89,7 @@ header {
     background-color: rgb(227, 227, 227);
     height: fit-content;
     margin: 1vh 1vw;
+    padding-bottom: 50px;
 }
 
 .info-split .hr {
