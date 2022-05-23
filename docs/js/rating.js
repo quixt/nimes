@@ -56,11 +56,21 @@ submit.addEventListener("click", function(e) {
         r.dataset.rating = r.getAttribute("data-rating") + 1;
         setWidths();
         if (commentBox.value !== "") {
+            document.querySelector("#no-comments").style.display = "none";
             let comment = document.createElement("div");
             comment.className = "comment";
-            comment.innerHTML = commentBox.value;
+            comment.innerHTML =
+
+                `
+            <span class='comment-head'><img src='../assets/pfp.jpg' class='pfp'><h5 class='username'>You</h5></span>
+            <hr class='comment-hr'>
+            <p class='content'>${commentBox.value}</p>
+            `;
+
             comments.appendChild(comment);
+
             commentBox.value = "";
+            console.log("c")
         }
     }
 });
