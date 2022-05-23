@@ -42,12 +42,12 @@
             <h3 class="nav-text">Museums</h3>
             <div class="nav-dropdown-content nav-split">
                 <div class="list">
-                    <a href="museums/musee-romanite.html" onmouseover="setDesc2(this);" data-src="./assets/museeromanite.jpg" data-desc="A newly opened modern museum showcasing old Roman artifacts.">Musée de<br>la Romanité</a>
-                    <a href="museums/musee-beaux.html" onmouseover="setDesc2(this);" data-src="./assets/museeb.jpg" data-desc="An art museum containing busts, paintings, and more from a private collection, stored in a stunningly beautiful house designed for it.">Musée des<br>Beaux-Arts
+                    <a href="/museums/musee-romanite.html" onmouseover="setDesc2(this);" data-src="../assets/museeromanite.jpg" data-desc="A newly opened modern museum showcasing old Roman artifacts.">Musée de<br>la Romanité</a>
+                    <a href="/museums/musee-beaux.html" onmouseover="setDesc2(this);" data-src="../assets/museeb.jpg" data-desc="An art museum containing busts, paintings, and more from a private collection, stored in a stunningly beautiful house designed for it.">Musée des<br>Beaux-Arts
 
 
                     </a>
-                    <a href="museums/carre-d-art.html" onmouseover="setDesc2(this);" data-src="./assets/musee-carree.jpg" data-desc="A museum displaying contemprary French art right across from the Maison Carrée, this is a must see for any art lover.">Carré d'Art</a>
+                    <a href="/museums/carre-d-art.html" onmouseover="setDesc2(this);" data-src="../assets/musee-carree.jpg" data-desc="A museum displaying contemprary French art right across from the Maison Carrée, this is a must see for any art lover.">Carré d'Art</a>
                 </div>
                 <div class="info">
                     <section>
@@ -59,14 +59,9 @@
                 </div>
             </div>
         </div>
-        <div id="other" class="nav-dropdown">
-            <h3 class="nav-text">Other Attractions</h3>
-            <div class="nav-dropdown-content">
-                <a href="#">Ruins</a>
-                <a href="#">Ruins</a>
-                <a href="#">Ruins</a>
-            </div>
-        </div>
+        <a class="nav-link">
+            <h3 class="nav-text">Attractions</h3>
+        </a>
         <a class="nav-link">
             <h3 class="nav-text">Events</h3>
         </a>
@@ -102,54 +97,39 @@
             <div class="hr"></div>
             <p class="desc">
                 The Arena of Nîmes was built in the second century BCE, it is one of the best preserved in the world. Originallty built for entertainment, it was later repurposed as a fortess and withstood many sieges.</p>
-            <div class="prices">
-                <h4>Tickets:</h4> Full Price: <span class="price">10€</span> | 7-17 Years Old: <span class="price">5€</span>
-                <h4>Parking:</h4> <span class="price">Inapplicable</span>
-                <h4>Wait Time:</h4> <span class="price">Fast</span>
-            </div>
+
         </section>
     </section>
+    <div class="prices">
+        <h4>Tickets:</h4> Full Price: <span class="price">10€</span> | 7-17 Years Old: <span class="price">5€</span>
+        <h4>Parking:</h4> <span class="price">Inapplicable</span>
+        <h4>Wait Time:</h4> <span class="price">Fast</span>
+    </div>
     <script src="../js/info.js"></script>
-    <script>
-        var currentIndex = 0;
-        var carousel = document.getElementById("carousel");
-        var images = ["arena1.jpg", "arena2.jpg", "arena3.jpg", "arena4.jpg"];
-
-        function setImage(index) {
-            carousel.style.backgroundImage = "url(" + "../assets/" + images[index] + ")";
-
-        }
-
-        function timer() {
-            currentIndex++;
-            if (currentIndex >= images.length) {
-                currentIndex = 0;
-            }
-            setImage(currentIndex);
-
-            setTimeout(timer, 6000);
-        }
-
-        function next() {
-            currentIndex++;
-            if (currentIndex >= images.length) {
-                currentIndex = 0;
-            }
-            setImage(currentIndex);
-        }
-
-        function prev() {
-            currentIndex--;
-            if (currentIndex < 0) {
-                currentIndex = images.length - 1;
-            }
-            setImage(currentIndex);
-        }
-
-
-        setImage(currentIndex);
-        setTimeout(timer, 6000);
+    <script src="../js/carousel.js">
     </script>
+    <section class="ratings">
+        <div id="reviews">
+            <div id="final-rating">
+
+            </div>
+            <div class="bar" data-rating="0" id="5-stars"><span class="csc">5 Stars</span><span class="is"></span></div>
+            <div class="bar" data-rating="0" id="4-stars"><span class="csc">4 Stars</span><span class="is"></span></div>
+            <div class="bar" data-rating="0" id="3-stars"><span class="csc">3 Stars</span><span class="is"></span></div>
+            <div class="bar" data-rating="0" id="2-stars"><span class="csc">2 Stars</span><span class="is"></span></div>
+            <div class="bar" data-rating="0" id="1-stars"><span class="csc">1 Stars</span><span class="is"></span></div>
+        </div>
+        <div id="add-ratings">
+            <div id="star-container">
+
+            </div>
+            <textarea id="comment" placeholder="Leave a comment..." maxlength="200" rows="8"></textarea>
+            <button id="leave-comment" type="submit">Leave Comment</button>
+        </div>
+    </section>
+    <section id="comments">
+
+    </section>
     <footer>
         <section>
             <h4>Contact Us:</h4>
@@ -161,6 +141,7 @@
         </section>
     </footer>
     <script src="../js/data_href.js"></script>
+    <script src="../js/rating.js"></script>
 </body>
 
 </html>
