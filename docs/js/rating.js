@@ -64,7 +64,7 @@ submit.addEventListener("click", function(e) {
                 `
             <span class='comment-head'><img src='../assets/pfp.jpg' class='pfp'><h5 class='username'>You</h5></span>
             <hr class='comment-hr'>
-            <p class='content'>${commentBox.value}</p>
+            <p class='content'>${commentBox.value.replace(/\n/g,"<br>")}</p>
             `;
 
             comments.appendChild(comment);

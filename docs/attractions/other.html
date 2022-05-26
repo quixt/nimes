@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other Attractions</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/other.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+
+<body>
+    <section id="logo">
+        <img src="../assets/logo.png" alt="Travel Nimes Logo" data-href="/">
+    </section>
+    <nav>
+
+    </nav>
+    <script>
+        $(function() {
+            $("nav").load("../nav.html");
+            $("footer").load("../footer.html");
+        });
+    </script>
+    <div class="grey-bar"></div>
+    <header style="background-image: url(../assets/fountains.jpg);">
+        <div class="dark"></div>
+        <h1>Other Attractions in Nîmes</h1>
+    </header>
+    <div class="attr left" id="market">
+        <img src="../assets/les_halles.jpg" />
+        <div class="attr-content">
+            <h3>Les Halles de Nîmes</h3>
+            <p>A farmers market selling local produces. You won't be able to resist the taste of oysters and fish caught by local fishermen or the picholine olives. If you are hungry for lunch there are many food bars selling a variety of local dishes.</p>
+        </div>
+    </div>
+    <div class="attr right" id="wine">
+        <img src="../assets/costiere_nimes.jpg" />
+        <div class="attr-content">
+            <h3>Costières de Nîmes</h3>
+            <p>Sourcing fresh grapes from the Rhône Valley, the Costières de Nîmes wines are hard to beat. With many stunningly delicious wines made by some of the finest winemakers around, this is an important stop for wine connoisseurs.</p>
+        </div>
+    </div>
+    <div class="attr left" id="gardens">
+        <img src="../assets/garden.jpg" />
+        <div class="attr-content">
+            <h3>Jardin de La Fontaine</h3>
+            <p>The Jardins de la Fontaine is one of the most beautiful gardens in all of France. The garden is full of thriving flowers and plants, and the stone fountain at its center is truly a sight to behold. Visitors to the garden can enjoy the peaceful
+                atmosphere and take in the stunning natural beauty.</p>
+        </div>
+    </div>
+    <script src="../js/data_href.js"></script>
+    <script src="../js/info.js"></script>
+    <footer></footer>
+</body>
+
+</html>

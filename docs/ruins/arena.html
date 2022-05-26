@@ -5,13 +5,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Welcome to Nîmes</title>
+    <title>Arena of Nîmes</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/ruins.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/nav.css">
-
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body>
@@ -19,55 +19,7 @@
         <img src="../assets/logo.png" alt="Travel Nimes Logo" data-href="/">
     </section>
     <nav>
-        <div id="ruins" class="nav-dropdown">
-            <h3 class="nav-text">Ruins</h3>
-            <div class="nav-dropdown-content nav-split">
-                <div class="list">
-                    <a href="/ruins/arena.html" onmouseover="setDesc(this);" data-src="../assets/arena.jpg" data-desc="A Roman ampitheatre built in the second century BCE, it is one of the best preserved in the world.">Arena of Nîmes</a>
-                    <a href="/ruins/maison-carree.html" onmouseover="setDesc(this);" data-src="../assets/maisoncarree.jpeg" data-desc="The Maison Carrée is the most well-kept Roman temple in France. Created long ago, it is beautiful and a prime example of Vitruvian artwork. ">Maison Carrée
-                </a>
-                    <a href="/ruins/pont-du-gard.html" onmouseover="setDesc(this);" data-src="../assets/pontdugard2.jpg" data-desc="The Pont du Gard is a beautiful and well-preserved Roman aqueduct from long ago.  The aqueduct has been graffitied by Napoleon's army.">Pont du Gard</a>
-                </div>
-                <div class="info">
-                    <section>
-                        <img class="info-img" src="">
-                        <p class="info-desc">
 
-                        </p>
-                    </section>
-                </div>
-            </div>
-        </div>
-        <div id="museums" class="nav-dropdown">
-            <h3 class="nav-text">Museums</h3>
-            <div class="nav-dropdown-content nav-split">
-                <div class="list">
-                    <a href="/museums/musee-romanite.html" onmouseover="setDesc2(this);" data-src="../assets/museeromanite.jpg" data-desc="A newly opened modern museum showcasing old Roman artifacts.">Musée de<br>la Romanité</a>
-                    <a href="/museums/musee-beaux.html" onmouseover="setDesc2(this);" data-src="../assets/museeb.jpg" data-desc="An art museum containing busts, paintings, and more from a private collection, stored in a stunningly beautiful house designed for it.">Musée des<br>Beaux-Arts
-
-
-                    </a>
-                    <a href="/museums/carre-d-art.html" onmouseover="setDesc2(this);" data-src="../assets/musee-carree.jpg" data-desc="A museum displaying contemprary French art right across from the Maison Carrée, this is a must see for any art lover.">Carré d'Art</a>
-                </div>
-                <div class="info">
-                    <section>
-                        <img class="info-img" src="">
-                        <p class="info-desc">
-
-                        </p>
-                    </section>
-                </div>
-            </div>
-        </div>
-        <a class="nav-link">
-            <h3 class="nav-text">Attractions</h3>
-        </a>
-        <a class="nav-link">
-            <h3 class="nav-text">Events</h3>
-        </a>
-        <a class="nav-link">
-            <h3 class="nav-text">Culture</h3>
-        </a>
     </nav>
     <div class="grey-bar"></div>
     <header style="background-image: url(../assets/carousel1.jpg);">
@@ -75,10 +27,15 @@
         <h1>Arena of Nîmes</h1>
     </header>
     <div class="grey-bar"></div>
-
+    <script>
+        $(function() {
+            $("nav").load("../nav.html");
+            $("footer").load("../footer.html");
+        });
+    </script>
     <section class="info-split">
         <section>
-            <div id="carousel">
+            <div id="carousel" style="background-image: url(../assets/arena1.jpg);">
                 <span class="switch-button left" onclick="prev();">
                     &#10094;
                 </span>
@@ -100,11 +57,15 @@
 
         </section>
     </section>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4438.5916437424!2d4.362291239413986!3d43.833640117182185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b42d099c473107%3A0x27a2fad19108940f!2sAmphitheatre%20of%20N%C3%AEmes!5e0!3m2!1sen!2sus!4v1653501919019!5m2!1sen!2sus"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <div class="prices">
         <h4>Tickets:</h4> Full Price: <span class="price">10€</span> | 7-17 Years Old: <span class="price">5€</span>
         <h4>Parking:</h4> <span class="price">Inapplicable</span>
         <h4>Wait Time:</h4> <span class="price">Fast</span>
     </div>
+
     <script src="../js/info.js"></script>
     <script src="../js/carousel.js">
     </script>
@@ -113,9 +74,9 @@
             <div id="final-rating">
 
             </div>
-            <div class="bar" data-rating="0" id="5-stars"><span class="csc">5 Stars</span><span class="is"></span></div>
-            <div class="bar" data-rating="0" id="4-stars"><span class="csc">4 Stars</span><span class="is"></span></div>
-            <div class="bar" data-rating="0" id="3-stars"><span class="csc">3 Stars</span><span class="is"></span></div>
+            <div class="bar" data-rating="4" id="5-stars"><span class="csc">5 Stars</span><span class="is"></span></div>
+            <div class="bar" data-rating="1" id="4-stars"><span class="csc">4 Stars</span><span class="is"></span></div>
+            <div class="bar" data-rating="1" id="3-stars"><span class="csc">3 Stars</span><span class="is"></span></div>
             <div class="bar" data-rating="0" id="2-stars"><span class="csc">2 Stars</span><span class="is"></span></div>
             <div class="bar" data-rating="0" id="1-stars"><span class="csc">1 Stars</span><span class="is"></span></div>
         </div>
@@ -131,15 +92,11 @@
         <span id="no-comments">No Posts</span>
     </section>
     <footer>
-        <section>
-            <h4>Contact Us:</h4>
-            <p>
-                <strong>Phone: </strong>(206) - 490 - 1984<br>
-                <strong>Email: </strong><span style="cursor:pointer; text-decoration: underline;" data-href="mailto:info@travelnimes.com">info@travelnimes.com</span><br>
-                <strong>Sign up for the Weekly Newspaper: </strong><input type="text" placeholder="yourname@gmail.com"><button style="font-family:'Mulish', sans-serif; background-color:limegreen; margin-left:10px; color:white; border:none; padding:5px; cursor:pointer; border-radius:5px;">Sign Up</button>
-            </p>
-        </section>
+
     </footer>
+    <script>
+        const images = ["arena1.jpg", "arena2.jpg", "arena3.jpg", "arena4.jpg"];
+    </script>
     <script src="../js/data_href.js"></script>
     <script src="../js/rating.js"></script>
 </body>

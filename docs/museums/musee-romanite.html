@@ -5,70 +5,28 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Welcome to Nîmes</title>
+    <title>Musée de la Romanité</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/ruins.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/nav.css">
-
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body>
     <section id="logo">
-        <img src="../assets/logo.png" alt="Travel Nimes Logo" data-href="/">
+        <img src="../assets/logo.png" alt="Travel Nimes Logo" data-href="/index.html">
     </section>
     <nav>
-        <div id="ruins" class="nav-dropdown">
-            <h3 class="nav-text">Ruins</h3>
-            <div class="nav-dropdown-content nav-split">
-                <div class="list">
-                    <a href="/ruins/arena.html" onmouseover="setDesc(this);" data-src="../assets/arena.jpg" data-desc="A Roman ampitheatre built in the second century BCE, it is one of the best preserved in the world.">Arena of Nîmes</a>
-                    <a href="/ruins/maison-carree.html" onmouseover="setDesc(this);" data-src="../assets/maisoncarree.jpeg" data-desc="The Maison Carrée is the most well-kept Roman temple in France. Created long ago, it is beautiful and a prime example of Vitruvian artwork. ">Maison Carrée
-                </a>
-                    <a href="/ruins/pont-du-gard.html" onmouseover="setDesc(this);" data-src="../assets/pontdugard2.jpg" data-desc="The Pont du Gard is a beautiful and well-preserved Roman aqueduct from long ago.  The aqueduct has been graffitied by Napoleon's army.">Pont du Gard</a>
-                </div>
-                <div class="info">
-                    <section>
-                        <img class="info-img" src="">
-                        <p class="info-desc">
 
-                        </p>
-                    </section>
-                </div>
-            </div>
-        </div>
-        <div id="museums" class="nav-dropdown">
-            <h3 class="nav-text">Museums</h3>
-            <div class="nav-dropdown-content nav-split">
-                <div class="list">
-                    <a href="/museums/musee-romanite.html" onmouseover="setDesc2(this);" data-src="../assets/museeromanite.jpg" data-desc="A newly opened modern museum showcasing old Roman artifacts.">Musée de<br>la Romanité</a>
-                    <a href="/museums/musee-beaux.html" onmouseover="setDesc2(this);" data-src="../assets/museeb.jpg" data-desc="An art museum containing busts, paintings, and more from a private collection, stored in a stunningly beautiful house designed for it.">Musée des<br>Beaux-Arts
-
-
-                    </a>
-                    <a href="/museums/carre-d-art.html" onmouseover="setDesc2(this);" data-src="../assets/musee-carree.jpg" data-desc="A museum displaying contemprary French art right across from the Maison Carrée, this is a must see for any art lover.">Carré d'Art</a>
-                </div>
-                <div class="info">
-                    <section>
-                        <img class="info-img" src="">
-                        <p class="info-desc">
-
-                        </p>
-                    </section>
-                </div>
-            </div>
-        </div>
-        <a class="nav-link">
-            <h3 class="nav-text">Attractions</h3>
-        </a>
-        <a class="nav-link">
-            <h3 class="nav-text">Events</h3>
-        </a>
-        <a class="nav-link">
-            <h3 class="nav-text">Culture</h3>
-        </a>
     </nav>
+    <script>
+        $(function() {
+            $("nav").load("../nav.html");
+            $("footer").load("../footer.html");
+        });
+    </script>
     <div class="grey-bar"></div>
     <header style="background-image: url(../assets/museerom.jpg);">
         <div class="dark"></div>
@@ -97,15 +55,39 @@
             <div class="hr"></div>
             <p class="desc">
                 The Musée de la Romanité is a must-see for anyone visiting Nîmes. It is interactive and easily accessible, and highly interesting. Visitors not into history may also enjoy the garden.</p>
-            <div class="prices">
-                <h4>Tickets:</h4> Adults: <span class="price">9€</span> | 7-17 Years Old: <span class="price">3€</span> | Family Ticket: <span class="price">21€</span>
-                <h4>Parking:</h4> <span class="price">Free</span>
-                <h4>Average Duration:</h4> <span class="price">1.5 Hours</span>
-                <h4>Shops:</h4> <span class="price">Book/Gift Shop</span>, <span class="price">Bistro</span>
-            </div>
+
         </section>
     </section>
-    <script src="../js/info.js"></script>
+    <div class="prices">
+        <h4>Tickets:</h4> Adults: <span class="price">9€</span> | 7-17 Years Old: <span class="price">3€</span> | Family Ticket: <span class="price">21€</span>
+        <h4>Parking:</h4> <span class="price">Free</span>
+        <h4>Average Duration:</h4> <span class="price">1.5 Hours</span>
+        <h4>Shops:</h4> <span class="price">Book/Gift Shop</span>, <span class="price">Bistro</span>
+    </div>
+    <section class="ratings">
+        <div id="reviews">
+            <div id="final-rating">
+
+            </div>
+            <div class="bar" data-rating="5" id="5-stars"><span class="csc">5 Stars</span><span class="is"></span></div>
+            <div class="bar" data-rating="0" id="4-stars"><span class="csc">4 Stars</span><span class="is"></span></div>
+            <div class="bar" data-rating="0" id="3-stars"><span class="csc">3 Stars</span><span class="is"></span></div>
+            <div class="bar" data-rating="0" id="2-stars"><span class="csc">2 Stars</span><span class="is"></span></div>
+            <div class="bar" data-rating="0" id="1-stars"><span class="csc">1 Stars</span><span class="is"></span></div>
+        </div>
+        <div id="add-ratings">
+            <div id="star-container">
+
+            </div>
+            <textarea id="comment" placeholder="Leave a comment..." maxlength="1000" rows="8"></textarea>
+            <button id="leave-comment" type="submit">Leave Comment</button>
+        </div>
+    </section>
+    <section id="comments">
+        <span id="no-comments">No Posts</span>
+    </section>
+
+    <script src="../js/rating.js"></script>
     <script>
         var currentIndex = 0;
         var carousel = document.getElementById("carousel");
@@ -147,14 +129,7 @@
         setTimeout(timer, 6000);
     </script>
     <footer>
-        <section>
-            <h4>Contact Us:</h4>
-            <p>
-                <strong>Phone: </strong>(206) - 490 - 1984<br>
-                <strong>Email: </strong><span style="cursor:pointer; text-decoration: underline;" data-href="mailto:info@travelnimes.com">info@travelnimes.com</span><br>
-                <strong>Sign up for the Weekly Newspaper: </strong><input type="text" placeholder="yourname@gmail.com"><button style="font-family:'Mulish', sans-serif; background-color:limegreen; margin-left:10px; color:white; border:none; padding:5px; cursor:pointer; border-radius:5px;">Sign Up</button>
-            </p>
-        </section>
+
     </footer>
     <script src="../js/data_href.js"></script>
 </body>

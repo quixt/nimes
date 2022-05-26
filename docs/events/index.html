@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to Nîmes</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/other.css">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+
+<body>
+    <section id="logo">
+        <img src="../assets/logo.png" alt="Travel Nimes Logo" data-href="/">
+    </section>
+    <nav>
+
+    </nav>
+    <script>
+        $(function() {
+            $("nav").load("../nav.html");
+            $("footer").load("../footer.html");
+        });
+    </script>
+    <div class="grey-bar"></div>
+    <header style="background-image: url(../assets/festivaldenimes.jpg);">
+
+        <div class="dark"></div>
+        <h1>Events in Nîmes</h1>
+
+    </header>
+    <div class="grey-bar"></div>
+    <div class="attr left" id="festival-de-nimes">
+        <img src="../assets/festnimes.jpg" />
+        <div class="attr-content">
+            <h3>Festival de Nîmes</h3>
+            <p>
+                The historic city of Nimes in the south of France is the perfect setting for the Festival de Nimes. This annual music festival takes place in the beautiful Roman amphitheatre. The festival features a wide range of music, from classical and opera to pop
+                and rock. There is something for everyone.</p>
+            <span class="timespan">June 17 - July 20 on varying days</span>
+        </div>
+    </div>
+    <div class="attr right" id="pentecost-feria">
+        <img src="../assets/pentecost-feria.jpg" />
+        <div class="attr-content">
+            <h3>Pentecost Feria</h3>
+            <p>
+                The annual Pentecost Feria bullfights in Nimes, France are a popular tourist attraction. Every year, bullfighters from all over the world come to Nimes to compete in the feria. The bullfights are held in an arena in the center of the city, and they are
+                always well-attended.</p>
+            <span class="timespan">June 5</span>
+        </div>
+
+    </div>
+    <div class="attr left" id="great-roman-games">
+        <img src="../assets/greatgames.webp" />
+        <div class="attr-content">
+            <h3>The Great Games of Rome</h3>
+            <p>
+
+                If you are a fan of ancient history, then the Games of Rome reenactments in Nimes, France are definitely something you will want to check out. Every year, people from all over the world come to Nimes to take part in these games, which are a recreation
+                of the ancient Olympic Games.</p>
+            <span class="timespan">October 7 - 11</span>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="./js/data_href.js"></script>
+</body>
+
+</html>

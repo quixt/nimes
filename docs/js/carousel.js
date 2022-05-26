@@ -1,6 +1,5 @@
 var currentIndex = 0;
 var carousel = document.getElementById("carousel");
-var images = ["arena1.jpg", "arena2.jpg", "arena3.jpg", "arena4.jpg"];
 
 function setImage(index) {
     carousel.style.backgroundImage = "url(" + "../assets/" + images[index] + ")";

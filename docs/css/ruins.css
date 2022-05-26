@@ -20,6 +20,7 @@ header {
     grid-template-columns: 30% 70%;
     margin-left: 20vw;
     width: 60vw;
+    margin-bottom: 2vh;
 }
 
 
@@ -90,7 +91,12 @@ header {
     height: fit-content;
     margin-left: 20vw;
     padding-bottom: 50px;
+    padding-top: 20px;
     border-radius: 8px 8px 0 0;
+}
+
+.prices * {
+    font-family: "Mulish", sans-serif;
 }
 
 .info-split .hr {
@@ -125,7 +131,6 @@ h4 {
     grid-template-columns: 40% 60%;
     margin-left: 20vw;
     height: 40vh;
-    border-radius: 0 0 8px 8px;
     background-color: #e2e2e2;
 }
 
@@ -215,6 +220,7 @@ textarea {
     height: 40vh;
     overflow-y: scroll;
     background-color: #e0e0e0;
+    border-radius: 0 0 8px 8px;
 }
 
 #no-comments {
@@ -259,4 +265,10 @@ textarea {
     display: flex;
     align-items: middle;
     justify-content: left;
+}
+
+iframe {
+    width: 60vw;
+    margin-left: 1vw;
+    margin-bottom: 2vh;
 }
