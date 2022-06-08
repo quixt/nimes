@@ -12,22 +12,69 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/nav.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="../css/footer.css">
+
 
 </head>
 
 <body>
     <section id="logo">
-        <img src="../assets/logo.png" alt="Travel Nimes Logo" data-href="/">
+        <img src="../assets/logo.png" alt="Travel Nimes Logo" data-href="../index.html">
     </section>
     <nav>
+        <div id="ruins" class="nav-dropdown">
+            <h3 class="nav-text">Ruins</h3>
+            <div class="nav-dropdown-content nav-split">
+                <div class="list">
+                    <a href="../ruins/arena.html" onmouseover="setDesc(this);" data-src="../assets/arena.jpg" data-desc="A Roman ampitheatre built in the second century BCE, it is one of the best preserved in the world.">Arena of Nîmes</a>
+                    <a href="../ruins/maison-carree.html" onmouseover="setDesc(this);" data-src="../assets/maisoncarree.jpeg" data-desc="The Maison Carrée is the most well-kept Roman temple in France. Created long ago, it is beautiful and a prime example of Vitruvian artwork. ">Maison Carrée
+                </a>
+                    <a href="../ruins/pont-du-gard.html" onmouseover="setDesc(this);" data-src="../assets/pontdugard2.jpg" data-desc="The Pont du Gard is a beautiful and well-preserved Roman aqueduct from long ago.  The aqueduct has been graffitied by Napoleon's army.">Pont du Gard</a>
+                </div>
+                <div class="info">
+                    <section>
+                        <img class="info-img" src="">
+                        <p class="info-desc">
 
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div id="museums" class="nav-dropdown">
+            <h3 class="nav-text">Museums</h3>
+            <div class="nav-dropdown-content nav-split">
+                <div class="list">
+                    <a href="../museums/musee-romanite.html" onmouseover="setDesc2(this);" data-src="../assets/museeromanite.jpg" data-desc="A newly opened modern museum showcasing old Roman artifacts.">Musée de<br>la Romanité</a>
+                    <a href="../museums/musee-beaux.html" onmouseover="setDesc2(this);" data-src="../assets/museeb.jpg" data-desc="An art museum containing busts, paintings, and more from a private collection, stored in a stunningly beautiful house designed for it.">Musée des<br>Beaux-Arts
+        
+        
+                    </a>
+                    <a href="../museums/carre-d-art.html" onmouseover="setDesc2(this);" data-src="../assets/musee-carree.jpg" data-desc="A museum displaying contemprary French art right across from the Maison Carrée, this is a must see for any art lover.">Carré d'Art</a>
+                </div>
+                <div class="info">
+                    <section>
+                        <img class="info-img" src="">
+                        <p class="info-desc">
+
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <a class="nav-link" href="../attractions">
+            <h3 class="nav-text">Attractions</h3>
+        </a>
+        <a class="nav-link" href="../events">
+            <h3 class="nav-text">Events</h3>
+        </a>
+        <a class="nav-link" href="../../../zack_albright/final country website. tokyo/index.html">
+            <h3 class="nav-text">Culture</h3>
+        </a>
+
+        <script src="../js/info.js"></script>
     </nav>
-    <script>
-        $(function() {
-            $("nav").load("../nav.html");
-            $("footer").load("../footer.html");
-        });
-    </script>
+
     <div class="grey-bar"></div>
     <header style="background-image: url(../assets/maisonc.jpg);">
         <div class="dark"></div>
@@ -36,7 +83,7 @@
     <div class="grey-bar"></div>
 
     <section class="info-split">
-        <section>
+        <!-- <section>
             <div id="carousel" style="background-image: url(../assets/mc1.jpeg);">
                 <span class="switch-button left" onclick="prev();">
                     &#10094;
@@ -45,12 +92,18 @@
                     &#10095;
                 </span>
             </div>
-        </section>
+        </section> -->
         <section>
             <p class="desc">
-                Aqueducts moved water through gravity alone, along a slight overall downward gradient within conduits of stone, brick, concrete or lead; the steeper the gradient, the faster the flow. Most conduits were buried beneath the ground and followed the contours
-                of the terrain; obstructing peaks were circumvented or, less often, tunneled through. Where valleys or lowlands intervened, the conduit was carried on bridgework, or its contents fed into high-pressure lead, ceramic, or stone pipes and
-                siphoned across.
+
+                The Maison Carrée is one of the best-preserved Roman temples in Europe. It is located in the French city of Nîmes and is one of the most popular tourist attractions in the area. The temple is thought to have been built in the 1st century AD, and is a
+                perfect example of Roman architecture of the time. It is one of only a handful of Roman temples that are still standing today. The Maison Carrée is built entirely out of marble, and is one of the largest Roman temples that has survived.
+                It measures 30 meters wide and 60 meters long. The exterior of the temple is adorned with Corinthian columns, which are a type of column that is very ornate and decorated. There are 12 columns on the front of the temple, and 6 on each
+                side. The columns are spaced evenly and support a pediment, which is a triangular structure that is found above the columns. The interior of the Maison Carrée is very simple, with a large open space that is surrounded by a colonnade, or
+                a row of columns. The only decoration inside the temple is a statue of the two Roman gods, Jupiter and Juno, who were the main deities worshiped in the temple. The Maison Carrée was built in honor of the Emperor Augustus and his wife Livia.
+                It is thought that the temple was used as a place of worship, as well as a place to hold public meetings. The temple was built on top of a previous structure that was destroyed by fire, and it is believed that the Maison Carrée was built
+                in its place. The Maison Carrée is a popular tourist attraction in Nîmes, and receives over 500,000 visitors each year. It is one of the most well-preserved Roman temples in the world, and is a must-see for anyone interested in Roman history
+                and architecture.
 
 
             </p>
@@ -60,8 +113,12 @@
 
         </section>
     </section>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27380.012484945495!2d4.37809315774963!3d43.835737096266314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b42da098916a27%3A0x852af3d137b29d9b!2sMaison%20Carr%C3%A9e!5e0!3m2!1sen!2sus!4v1653501940507!5m2!1sen!2sus"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div id="sample-imgs">
+        <img src="../assets/mc1.jpeg" alt="A photo of a large marbe temple with tall columns atthe front">
+        <img src="../assets/mc2.jpg" alt="A front view of a large temple">
+        <img src="../assets/mc3.jpg" alt="An old pencil drawing of the Maison Carree">
+    </div>
+
     <div class="prices">
         <h4>Tickets:</h4> <span class="price">Inapplicable</span>
         <h4>Parking:</h4> <span class="price">Inapplicable</span>
@@ -83,24 +140,94 @@
             <div id="star-container">
 
             </div>
-            <textarea id="comment" placeholder="Leave a comment..." maxlength="1000" rows="8"></textarea>
-            <button id="leave-comment" type="submit">Leave Comment</button>
+            <button id="leave-comment" type="submit">Rate</button>
         </div>
-    </section>
-    <section id="comments">
-        <span id="no-comments">No Posts</span>
-    </section>
 
+    </section>
+    <button class="back-to-top">
+        Back to Top
+    </button>
+    <script>
+        document.querySelector(".back-to-top").addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        window.addEventListener("scroll", function() {
+            console.log(window.scrollY);
+            if (window.scrollY > 500) {
+                document.querySelector(".back-to-top").style.opacity = "1";
+            } else {
+                document.querySelector(".back-to-top").style.opacity = "0";
+            }
+        });
+    </script>
     <footer>
+        <div class="brand">
+            <div>
+                <h2>Travel Nîmes</h2>
+                <p>Have fun your <strong>own</strong> way.</p>
+            </div>
 
+
+        </div>
+        <ul>
+            <li>
+                <h2>Explore</h2>
+            </li>
+            <li>
+                <span data-href="../index.html">Home</span>
+            </li>
+            <li>
+                <span data-href="../museums">Museums</span>
+            </li>
+            <li>
+                <span data-href="../attractions">Attractions</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h2>Follow</h2>
+            </li>
+            <li><img class="icon" src="../assets/facebook.png" alt=""><a href="https://facebook.com/user/TravelNimes">TravelNimes</a></li>
+            <li><img class="icon" src="../assets/twitter.png" alt=""><a href="https://twitter.com/@TravelNimesFrance">@TravelNimesFrance</a></li>
+            <li><img class="icon" src="../assets/instagram.png" alt=""><a href="https://twitter.com/@TravelNimes">@TravelNimes</a></li>
+
+
+        </ul>
+        <ul>
+            <li>
+                <h2>Legal</h2>
+            </li>
+            <li>
+                <span data-href="../legal/terms.html">Terms of Use</span>
+            </li>
+            <li>
+                <span data-href="../legal/privacy.html">Privacy Policy</span>
+            </li>
+            <li>
+
+                <span>&copy; 1984-2022 TravelNimes</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h2>Stay Connected</h2>
+            </li>
+            <li>
+                <div id="signup">
+                    <input type="text" placeholder="Get the weekly news"><button id="su">Sign Up</button>
+                </div>
+            </li>
+        </ul>
     </footer>
     <script>
         const images = ["mc1.jpeg", "mc2.jpg", "mc3.jpg", "mc4.jpg"];
     </script>
     <script src="../js/data_href.js"></script>
     <script src="../js/info.js"></script>
-    <script src="../js/carousel.js">
-    </script>
+
     <script src="../js/rating.js"></script>
 </body>
 

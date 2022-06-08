@@ -14,24 +14,104 @@
     top: 0;
 }
 
+.inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
 .attr {
-    width: 60vw;
-    height: 30vh;
-    background-color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    display: flex;
-    margin-top: 6vh;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* background-color: rgb(190, 190, 190); */
+    width: 40vw;
+    height: 100%;
+    border-radius: 0px 8px 8px 0px;
+    perspective: 1000px;
+}
+
+.inner {
+    position: relative;
+}
+
+.attr-front {
+    width: 40vw;
+    height: 50vh;
+    background-color: #f6f6f6;
+    border-radius: 0px 8px 8px 0px;
     border: 1px solid rgb(187, 187, 187);
+    border-left: none;
+    transition: transform 0.4s linear;
+    perspective: 1000px;
+    padding-top: 20%;
+    backface-visibility: hidden;
+    background-image: url(../assets/tulip.jpg);
+    background-size: 10vw auto;
+    background-repeat: no-repeat;
+    background-position: 15vw 10vh;
+}
+
+.attr-back {
+    background-color: #257cb3;
+    position: absolute;
+    width: 40vw;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateX(180deg);
+    transition: transform 0.4s linear;
+    padding: 60px 20px;
+    perspective: 1000px;
+    overflow-y: auto;
+    border-radius: 0px 8px 8px 0px;
+    border: 1px solid rgb(187, 187, 187);
+    border-left: none;
+}
+
+.inner:hover .attr-front {
+    transform: rotateX(180deg);
+}
+
+.inner:hover .attr-back {
+    transform: rotateX(0deg);
+}
+
+.attr-holder {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 6vh 0;
+}
+
+.attr-holder img {
+    width: 80%;
+    display: block;
+    margin: 0;
+    margin-left: auto;
+    height: 50vh;
+    object-fit: cover;
+    border-radius: 8px 0px 0px 8px;
+    border: 1px solid rgb(187, 187, 187);
+    border-right: none;
+    filter: grayscale(50%);
+    transition: filter 0.1s linear;
+}
+
+.attr-holder:hover img {
+    filter: grayscale(0%);
 }
 
 .attr h3 {
     font-family: "Noto Serif", serif;
-    font-size: 3vh;
+    font-size: 6vh;
     width: fit-content;
     margin: 0 auto;
     margin-top: 3vh;
+    background-image: -webkit-linear-gradient(right, #257cb3, #1e5a80);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.attr:hover h3 {
+    background-size: 100% 2px;
 }
 
 .attr p {
@@ -40,9 +120,11 @@
     padding: 0 20px;
     line-height: 4vh;
     font-size: 2vh;
-    border-left: 3px solid #257cb3;
+    border-left: 3px solid #f0f0f0;
     padding: 0 10px;
     margin: 0 10px;
+    color: white;
+    overflow-y: auto;
 }
 
 .attr img {
@@ -58,20 +140,11 @@
     display: inline-block;
 }
 
-.left {
-    margin-left: 5vw;
-    margin-right: auto;
-}
 
-.right {
-    margin-right: 5vw;
-    margin-left: auto;
-}
-
-.attr:hover {
+/* .attr:hover {
     transform: translateX(-5px) translateY(-5px);
     box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
-}
+} */
 
 .dark {
     background-color: rgba(0, 0, 0, 0.5);
@@ -86,10 +159,62 @@
 .timespan {
     font-family: "Mulish", sans-serif;
     font-size: 1.4vh;
-    color: #959595;
+    color: #c4c4c4;
     font-style: italic;
     display: block;
     width: fit-content;
     margin-left: 20px;
     margin-top: 2vh;
+}
+
+li {
+    font-family: "Mulish", sans-serif;
+}
+
+.prices * {
+    font-family: "Mulish", sans-serif;
+}
+
+.jump-to {
+    display: flex;
+    width: 100%;
+    background-color: red;
+}
+
+.jump-to a {
+    width: 25%;
+    height: 5vh;
+    background-color: #257cb3;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 1.7vh;
+    font-family: "Mulish", sans-serif;
+}
+
+.jump-to a:hover {
+    background-color: #1e5a80;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 10000;
+    background-color: #3283b6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1.5vh;
+    cursor: pointer;
+    opacity: 0;
+    font-family: "Mulish", sans-serif;
+    transition: background-color 0.25s, opacity 0.25s;
+}
+
+.back-to-top:hover {
+    background-color: #1e5a80;
 }

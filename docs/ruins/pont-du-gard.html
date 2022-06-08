@@ -12,22 +12,69 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/nav.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="../css/footer.css">
+
 
 </head>
 
 <body>
     <section id="logo">
-        <img src="../assets/logo.png" alt="Travel Nimes Logo" data-href="/">
+        <img src="../assets/logo.png" alt="Travel Nimes Logo" data-href="../index.html">
     </section>
     <nav>
+        <div id="ruins" class="nav-dropdown">
+            <h3 class="nav-text">Ruins</h3>
+            <div class="nav-dropdown-content nav-split">
+                <div class="list">
+                    <a href="../ruins/arena.html" onmouseover="setDesc(this);" data-src="../assets/arena.jpg" data-desc="A Roman ampitheatre built in the second century BCE, it is one of the best preserved in the world.">Arena of Nîmes</a>
+                    <a href="../ruins/maison-carree.html" onmouseover="setDesc(this);" data-src="../assets/maisoncarree.jpeg" data-desc="The Maison Carrée is the most well-kept Roman temple in France. Created long ago, it is beautiful and a prime example of Vitruvian artwork. ">Maison Carrée
+                </a>
+                    <a href="../ruins/pont-du-gard.html" onmouseover="setDesc(this);" data-src="../assets/pontdugard2.jpg" data-desc="The Pont du Gard is a beautiful and well-preserved Roman aqueduct from long ago.  The aqueduct has been graffitied by Napoleon's army.">Pont du Gard</a>
+                </div>
+                <div class="info">
+                    <section>
+                        <img class="info-img" src="">
+                        <p class="info-desc">
 
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div id="museums" class="nav-dropdown">
+            <h3 class="nav-text">Museums</h3>
+            <div class="nav-dropdown-content nav-split">
+                <div class="list">
+                    <a href="../museums/musee-romanite.html" onmouseover="setDesc2(this);" data-src="../assets/museeromanite.jpg" data-desc="A newly opened modern museum showcasing old Roman artifacts.">Musée de<br>la Romanité</a>
+                    <a href="../museums/musee-beaux.html" onmouseover="setDesc2(this);" data-src="../assets/museeb.jpg" data-desc="An art museum containing busts, paintings, and more from a private collection, stored in a stunningly beautiful house designed for it.">Musée des<br>Beaux-Arts
+        
+        
+                    </a>
+                    <a href="../museums/carre-d-art.html" onmouseover="setDesc2(this);" data-src="../assets/musee-carree.jpg" data-desc="A museum displaying contemprary French art right across from the Maison Carrée, this is a must see for any art lover.">Carré d'Art</a>
+                </div>
+                <div class="info">
+                    <section>
+                        <img class="info-img" src="">
+                        <p class="info-desc">
+
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <a class="nav-link" href="../attractions">
+            <h3 class="nav-text">Attractions</h3>
+        </a>
+        <a class="nav-link" href="../events">
+            <h3 class="nav-text">Events</h3>
+        </a>
+        <a class="nav-link" href="../../../zack_albright/final country website. tokyo/index.html">
+            <h3 class="nav-text">Culture</h3>
+        </a>
+
+        <script src="../js/info.js"></script>
     </nav>
-    <script>
-        $(function() {
-            $("nav").load("../nav.html");
-            $("footer").load("../footer.html");
-        });
-    </script>
+
     <div class="grey-bar"></div>
     <header style="background-image: url(../assets/carousel3.jpg);">
         <div class="dark"></div>
@@ -36,16 +83,7 @@
     <div class="grey-bar"></div>
 
     <section class="info-split">
-        <section>
-            <div id="carousel" style="background-image: url(../assets/pdg1.jpg);">
-                <span class="switch-button left" onclick="prev();">
-                    &#10094;
-                </span>
-                <span class="switch-button right" onclick="next();">
-                    &#10095;
-                </span>
-            </div>
-        </section>
+
         <section>
             <p class="desc">
                 Aqueducts moved water through gravity alone, along a slight overall downward gradient within conduits of stone, brick, concrete or lead; the steeper the gradient, the faster the flow. Most conduits were buried beneath the ground and followed the contours
@@ -56,17 +94,24 @@
             </p>
             <div class="hr"></div>
             <p class="desc">
-                The Pont du Gard is a beautifully preserved example of an aqueduct and the tallest in the world. Still in full glory with all of its columns and arches, it is easily accessable and a must see for anyone visiting.</p>
+                The Pont du Gard is a Roman aqueduct that was built in the 1st century AD. It is the tallest and best-preserved Roman aqueduct in the world. The Pont du Gard is 50m high and 9km long. It is a UNESCO World Heritage Site. The Pont du Gard was built to bring
+                water from the springs of the Eure-et-Loir region to the Roman city of Nimes. The aqueduct was in use for over 400 years. It is an engineering marvel and a testimony to the genius of the Roman engineers. The Pont du Gard is one of the
+                most popular tourist attractions in France. Every year, millions of people visit the Pont du Gard to admire its beauty and to learn about its history. The Pont du Gard is a symbol of the Roman empire and its engineering prowess. It is
+                also a reminder of the importance of water in the daily life of the people of Nimes.</p>
 
         </section>
     </section>
+    <div id="sample-imgs">
+        <img src="../assets/pdg1.jpg" alt="A white aqueduct running across a river in a wooded valley">
+        <img src="../assets/pdg2.jpg" alt="An aqueduct going across a river">
+        <img src="../assets/pdg3.jpg" alt="An aqueduct in a river.">
+    </div>
     <div class="prices">
         <h4>Tickets:</h4> Adult Price: <span class="price">9.50€</span> | 0-18 Years Old: <span class="price">Free</span>
         <h4>Parking:</h4> <span class="price">18€, 1400 Spots</span>
         <h4>Wait Time:</h4> <span class="price">Fast</span>
     </div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1566.2818879058132!2d4.533898340741654!3d43.9474978312909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b5c8c248e704d5%3A0x26b17319f386eae2!2sPont%20du%20Gard!5e0!3m2!1sen!2sus!4v1653501969843!5m2!1sen!2sus"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
     </script>
     <section class="ratings">
         <div id="reviews">
@@ -83,21 +128,92 @@
             <div id="star-container">
 
             </div>
-            <textarea id="comment" placeholder="Leave a comment..." maxlength="1000" rows="8"></textarea>
-            <button id="leave-comment" type="submit">Leave Comment</button>
+            <button id="leave-comment" type="submit">Review</button>
         </div>
-    </section>
-    <section id="comments">
-        <span id="no-comments">No Posts</span>
-    </section>
-    <footer>
 
+    </section>
+    <button class="back-to-top">
+        Back to Top
+    </button>
+    <script>
+        document.querySelector(".back-to-top").addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        window.addEventListener("scroll", function() {
+            console.log(window.scrollY);
+            if (window.scrollY > 500) {
+                document.querySelector(".back-to-top").style.opacity = "1";
+            } else {
+                document.querySelector(".back-to-top").style.opacity = "0";
+            }
+        });
+    </script>
+    <footer>
+        <div class="brand">
+            <div>
+                <h2>Travel Nîmes</h2>
+                <p>Have fun your <strong>own</strong> way.</p>
+            </div>
+
+
+        </div>
+        <ul>
+            <li>
+                <h2>Explore</h2>
+            </li>
+            <li>
+                <span data-href="../index.html">Home</span>
+            </li>
+            <li>
+                <span data-href="../museums">Museums</span>
+            </li>
+            <li>
+                <span data-href="../attractions">Attractions</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h2>Follow</h2>
+            </li>
+            <li><img class="icon" src="../assets/facebook.png" alt=""><a href="https://facebook.com/user/TravelNimes">TravelNimes</a></li>
+            <li><img class="icon" src="../assets/twitter.png" alt=""><a href="https://twitter.com/@TravelNimesFrance">@TravelNimesFrance</a></li>
+            <li><img class="icon" src="../assets/instagram.png" alt=""><a href="https://twitter.com/@TravelNimes">@TravelNimes</a></li>
+
+
+        </ul>
+        <ul>
+            <li>
+                <h2>Legal</h2>
+            </li>
+            <li>
+                <span data-href="../legal/terms.html">Terms of Use</span>
+            </li>
+            <li>
+                <span data-href="../legal/privacy.html">Privacy Policy</span>
+            </li>
+            <li>
+
+                <span>&copy; 1984-2022 TravelNimes</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h2>Stay Connected</h2>
+            </li>
+            <li>
+                <div id="signup">
+                    <input type="text" placeholder="Get the weekly news"><button id="su">Sign Up</button>
+                </div>
+            </li>
+        </ul>
     </footer>
     <script>
         const images = ["pdg1.jpg", "pdg2.jpg", "pdg3.jpg", "pdg4.jpg"];
     </script>
     <script src="../js/info.js"></script>
-    <script src="../js/carousel.js"></script>
     <script src="../js/rating.js"></script>
     <script src="../js/data_href.js"></script>
 </body>

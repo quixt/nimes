@@ -12,22 +12,75 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/nav.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="./css/footer.css">
 
 </head>
 
 <body>
+    <div id="loading" style="display:none;"></div>
+    <script>
+        var rand = Math.floor(Math.random() * 20) + 1;
+        if (rand === 4) {
+            document.querySelector("#loading").style.display = "block";
+        }
+    </script>
     <section id="logo">
-        <img src="../assets/logo.png" alt="Travel Nimes Logo" data-href="/">
+        <img src="./assets/logo.png" alt="Travel Nimes Logo" data-href="/">
     </section>
     <nav>
+        <div id="ruins" class="nav-dropdown">
+            <h3 class="nav-text">Ruins</h3>
+            <div class="nav-dropdown-content nav-split">
+                <div class="list">
+                    <a href="./ruins/arena.html" onmouseover="setDesc(this);" data-src="./assets/arena.jpg" data-desc="A Roman ampitheatre built in the second century BCE, it is one of the best preserved in the world.">Arena of Nîmes</a>
+                    <a href="./ruins/maison-carree.html" onmouseover="setDesc(this);" data-src="./assets/maisoncarree.jpeg" data-desc="The Maison Carrée is the most well-kept Roman temple in France. Created long ago, it is beautiful and a prime example of Vitruvian artwork. ">Maison Carrée
+                </a>
+                    <a href="./ruins/pont-du-gard.html" onmouseover="setDesc(this);" data-src="./assets/pontdugard2.jpg" data-desc="The Pont du Gard is a beautiful and well-preserved Roman aqueduct from long ago.  The aqueduct has been graffitied by Napoleon's army.">Pont du Gard</a>
+                </div>
+                <div class="info">
+                    <section>
+                        <img class="info-img" src="">
+                        <p class="info-desc">
+
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div id="museums" class="nav-dropdown">
+            <h3 class="nav-text">Museums</h3>
+            <div class="nav-dropdown-content nav-split">
+                <div class="list">
+                    <a href="./museums/musee-romanite.html" onmouseover="setDesc2(this);" data-src="./assets/museeromanite.jpg" data-desc="A newly opened modern museum showcasing old Roman artifacts.">Musée de<br>la Romanité</a>
+                    <a href="./museums/musee-beaux.html" onmouseover="setDesc2(this);" data-src="./assets/museeb.jpg" data-desc="An art museum containing busts, paintings, and more from a private collection, stored in a stunningly beautiful house designed for it.">Musée des<br>Beaux-Arts
+        
+        
+                    </a>
+                    <a href="./museums/carre-d-art.html" onmouseover="setDesc2(this);" data-src="./assets/musee-carree.jpg" data-desc="A museum displaying contemprary French art right across from the Maison Carrée, this is a must see for any art lover.">Carré d'Art</a>
+                </div>
+                <div class="info">
+                    <section>
+                        <img class="info-img" src="">
+                        <p class="info-desc">
+
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <a class="nav-link" href="./attractions">
+            <h3 class="nav-text">Attractions</h3>
+        </a>
+        <a class="nav-link" href="./events">
+            <h3 class="nav-text">Events</h3>
+        </a>
+        <a class="nav-link" href="../../../zack_albright/final country website. tokyo/index.html">
+            <h3 class="nav-text">Culture</h3>
+        </a>
+
 
     </nav>
-    <script>
-        $(function() {
-            $("nav").load("./nav.html");
-            $("footer").load("./footer_index.html");
-        });
-    </script>
+
     <div class="grey-bar"></div>
     <header>
         <div id="carousel">
@@ -40,6 +93,10 @@
         </div>
 
         <h1>Nîmes, France</h1>
+        <div id="desc">
+            <h3></h3>
+            <p></p>
+        </div>
         <div id="dots">
 
         </div>
@@ -60,18 +117,18 @@
     <section id="attractions">
         <div class="attraction">
             <h3>Pont du Gard</h3>
-            <img src="./assets/pontdugard.jpg" alt="Pont du Gard">
+            <img src="./assets/pontdugard.jpg" alt="A photo of a large aqueduct crossing a river">
             <button class="learn-more" data-href="ruins/pont-du-gard.html">Learn More</button>
         </div>
         <div class="attraction">
             <h3>Musée de la Romanité</h3>
-            <img src="./assets/musee.jpg" alt="Musée de la Romanité">
+            <img src="./assets/musee.jpg" alt="The outside facade of a museum that looks like a wave made of tiles">
             <button class="learn-more" data-href="museums/musee-romanite.html">Learn More</button>
         </div>
         <div class="attraction">
             <h3>Costières de Nîmes</h3>
-            <img src="./assets/wine.jpg" alt="Costières de Nîmes wine">
-            <button class="learn-more" data-href="attractions/other.html#wine">Learn More</button>
+            <img src="./assets/wine.jpg" alt="A wine bottle and wine glass">
+            <button class="learn-more" data-href="attractions#wine">Learn More</button>
         </div>
     </section>
 
@@ -80,20 +137,26 @@
         var carousel = document.getElementById("carousel");
         var images = [{
             img: "./assets/carousel1.jpg",
-            desc: "A ruin"
-        }, {
-            img: "./assets/carousel2.jpg",
-            desc: "A town"
+            title: "The Arena of Nîmes",
+            desc: "A large Colosseum-esque arena with a huge ampitheater"
         }, {
             img: "./assets/carousel3.jpg",
-            desc: "A bridge"
+            title: "The Pont du Gard",
+            desc: "One of the most famous ruins in Nîmes, it is a massive portion of a Roman aqueduct"
+        }, {
+            img: "./assets/carousel2.jpg",
+            title: "Jardin de La Fontaine",
+            desc: "Beautiful plants and animals encased in an ancient Roman garden"
         }, {
             img: "./assets/carousel4.webp",
-            desc: "A bridge"
+            title: "Musée de la Romanité",
+            desc: "One of the most famous museums in Nîmes, it is a collection of Roman artifacts"
         }];
+        const description = document.getElementById("desc");
 
         function setImage(index) {
             carousel.style.backgroundImage = "url(" + images[index].img + ")";
+            description.innerHTML = "<h3>" + images[index].title + "</h3><p>" + images[index].desc + "</p>";
 
         }
 
@@ -136,9 +199,66 @@
         }
     </script>
     <footer>
+        <div class="brand">
+            <div>
+                <h2>Travel Nîmes</h2>
+                <p>Have fun your <strong>own</strong> way.</p>
+            </div>
 
+
+        </div>
+        <ul>
+            <li>
+                <h2>Explore</h2>
+            </li>
+            <li>
+                <span data-href="/">Home</span>
+            </li>
+            <li>
+                <span data-href="/museums">Museums</span>
+            </li>
+            <li>
+                <span data-href="/attractions">Attractions</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h2>Follow</h2>
+            </li>
+            <li><img class="icon" src="./assets/facebook.png" alt=""><a href="https://facebook.com/user/TravelNimes">TravelNimes</a></li>
+            <li><img class="icon" src="./assets/twitter.png" alt=""><a href="https://twitter.com/@TravelNimesFrance">@TravelNimesFrance</a></li>
+            <li><img class="icon" src="./assets/instagram.png" alt=""><a href="https://twitter.com/@TravelNimes">@TravelNimes</a></li>
+
+
+        </ul>
+        <ul>
+            <li>
+                <h2>Legal</h2>
+            </li>
+            <li>
+                <span data-href="/legal/terms.html">Terms of Use</span>
+            </li>
+            <li>
+                <span data-href="/legal/privacy.html">Privacy Policy</span>
+            </li>
+            <li>
+
+                <span>&copy; 1984-2022 TravelNimes</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h2>Stay Connected</h2>
+            </li>
+            <li>
+                <div id="signup">
+                    <input type="text" placeholder="Get the weekly news"><button id="su">Sign Up</button>
+                </div>
+            </li>
+        </ul>
     </footer>
     <script src="./js/data_href.js"></script>
+    <script src="./js/info.js"></script>
 </body>
 
 </html>

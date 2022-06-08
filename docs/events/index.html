@@ -11,24 +11,71 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/other.css">
+    <link rel="stylesheet" href="../css/footer.css">
 
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 </head>
 
 <body>
+    <div id="loading"></div>
     <section id="logo">
         <img src="../assets/logo.png" alt="Travel Nimes Logo" data-href="/">
     </section>
     <nav>
+        <div id="ruins" class="nav-dropdown">
+            <h3 class="nav-text">Ruins</h3>
+            <div class="nav-dropdown-content nav-split">
+                <div class="list">
+                    <a href="../ruins/arena.html" onmouseover="setDesc(this);" data-src="../assets/arena.jpg" data-desc="A Roman ampitheatre built in the second century BCE, it is one of the best preserved in the world.">Arena of Nîmes</a>
+                    <a href="../ruins/maison-carree.html" onmouseover="setDesc(this);" data-src="../assets/maisoncarree.jpeg" data-desc="The Maison Carrée is the most well-kept Roman temple in France. Created long ago, it is beautiful and a prime example of Vitruvian artwork. ">Maison Carrée
+                </a>
+                    <a href="../ruins/pont-du-gard.html" onmouseover="setDesc(this);" data-src="../assets/pontdugard2.jpg" data-desc="The Pont du Gard is a beautiful and well-preserved Roman aqueduct from long ago.  The aqueduct has been graffitied by Napoleon's army.">Pont du Gard</a>
+                </div>
+                <div class="info">
+                    <section>
+                        <img class="info-img" src="">
+                        <p class="info-desc">
 
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div id="museums" class="nav-dropdown">
+            <h3 class="nav-text">Museums</h3>
+            <div class="nav-dropdown-content nav-split">
+                <div class="list">
+                    <a href="../museums/musee-romanite.html" onmouseover="setDesc2(this);" data-src="../assets/museeromanite.jpg" data-desc="A newly opened modern museum showcasing old Roman artifacts.">Musée de<br>la Romanité</a>
+                    <a href="../museums/musee-beaux.html" onmouseover="setDesc2(this);" data-src="../assets/museeb.jpg" data-desc="An art museum containing busts, paintings, and more from a private collection, stored in a stunningly beautiful house designed for it.">Musée des<br>Beaux-Arts
+        
+        
+                    </a>
+                    <a href="../museums/carre-d-art.html" onmouseover="setDesc2(this);" data-src="../assets/musee-carree.jpg" data-desc="A museum displaying contemprary French art right across from the Maison Carrée, this is a must see for any art lover.">Carré d'Art</a>
+                </div>
+                <div class="info">
+                    <section>
+                        <img class="info-img" src="">
+                        <p class="info-desc">
+
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <a class="nav-link" href="../attractions">
+            <h3 class="nav-text">Attractions</h3>
+        </a>
+        <a class="nav-link" href="../events">
+            <h3 class="nav-text">Events</h3>
+        </a>
+        <a class="nav-link" href="../../../zack_albright/final country website. tokyo/index.html">
+            <h3 class="nav-text">Culture</h3>
+        </a>
+
+        <script src="../js/info.js"></script>
     </nav>
-    <script>
-        $(function() {
-            $("nav").load("../nav.html");
-            $("footer").load("../footer.html");
-        });
-    </script>
+
     <div class="grey-bar"></div>
     <header style="background-image: url(../assets/festivaldenimes.jpg);">
 
@@ -36,41 +83,150 @@
         <h1>Events in Nîmes</h1>
 
     </header>
-    <div class="grey-bar"></div>
-    <div class="attr left" id="festival-de-nimes">
+    <div class="jump-to">
+        <a href="#festival-de-nimes" style="width:33%;">Festival de Nîmes</a>
+        <a href="#pentecost-feria" style="width:33%;">Pentecost Feria</a>
+        <a href="#great-roman-games" style="width:34%;">The Great Games of Rome</a>
+    </div>
+
+    <div class="attr-holder">
         <img src="../assets/festnimes.jpg" />
-        <div class="attr-content">
-            <h3>Festival de Nîmes</h3>
-            <p>
-                The historic city of Nimes in the south of France is the perfect setting for the Festival de Nimes. This annual music festival takes place in the beautiful Roman amphitheatre. The festival features a wide range of music, from classical and opera to pop
-                and rock. There is something for everyone.</p>
-            <span class="timespan">June 17 - July 20 on varying days</span>
+        <div class="attr left" id="festival-de-nimes">
+
+            <div class="inner">
+                <div class="attr-back">
+
+                    <p>
+                        The Festival de Nîmes is a summer music festival held in the French city of Nîmes. The festival was founded in 1981 and takes place every year in July. The festival features a wide range of music genres, including rock, pop, electronic, and hip-hop. past
+                        performers include Muse, The Libertines, and Snoop Dogg. The festival takes place in the city's Roman amphitheatre, which was built in the 1st century AD.</p>
+                    <span class="timespan">June 17 - July 20 on varying days</span>
+                </div>
+                <div class="attr-front">
+                    <h3>Festival de Nîmes</h3>
+                </div>
+
+            </div>
         </div>
     </div>
-    <div class="attr right" id="pentecost-feria">
+    <div class="attr-holder">
         <img src="../assets/pentecost-feria.jpg" />
-        <div class="attr-content">
-            <h3>Pentecost Feria</h3>
-            <p>
-                The annual Pentecost Feria bullfights in Nimes, France are a popular tourist attraction. Every year, bullfighters from all over the world come to Nimes to compete in the feria. The bullfights are held in an arena in the center of the city, and they are
-                always well-attended.</p>
-            <span class="timespan">June 5</span>
-        </div>
+        <div class="attr right" id="pentecost-feria">
 
+            <div class="inner">
+                <div class="attr-back">
+
+                    <p>
+                        Nimes, in the south of France, is a city with a rich history dating back to the Roman Empire. Every year, the city celebrates the Pentecost Feria, a festival that commemorates the descent of the Holy Spirit upon the disciples of Jesus Christ.<br>                        The festival, which takes place over five days, features a number of traditional French activities, including bullfights, concerts, and parades. On the final day of the festival, a large procession makes its way through the city,
+                        culminating in a mass at the cathedral.<br> The Pentecost Feria is a cherished tradition in Nimes, and one that attracts visitors from all over the world. If you find yourself in France during the Pentecost season, be sure to check
+                        out this unique festival!
+                    </p>
+                    <span class="timespan">June 5</span>
+                </div>
+                <div class="attr-front">
+                    <h3>Pentecost Feria</h3>
+                </div>
+            </div>
+
+        </div>
     </div>
-    <div class="attr left" id="great-roman-games">
+    <div class="attr-holder">
         <img src="../assets/greatgames.webp" />
-        <div class="attr-content">
-            <h3>The Great Games of Rome</h3>
-            <p>
+        <div class="attr left" id="great-roman-games">
 
-                If you are a fan of ancient history, then the Games of Rome reenactments in Nimes, France are definitely something you will want to check out. Every year, people from all over the world come to Nimes to take part in these games, which are a recreation
-                of the ancient Olympic Games.</p>
-            <span class="timespan">October 7 - 11</span>
+            <div class="inner">
+                <div class="attr-back">
+
+                    <p>
+
+                        The Games are a modern adaptation of the ancient Roman festival, the Ludi Romani. The Games include chariot races, foot races, and javelin competitions, as well as gladiator fights.<br> The chariot races are held in the arena at
+                        the Nimes Amphitheatre, which is a replica of the Roman Colosseum. The races are between teams of two horses and two chariots. There are eight teams in total, and each team races three times.<br> The foot races are held on a track
+                        in the arena. The races are between teams of four runners. There are eight teams in total, and each team races three times.<br> The javelin competition is held in the arena. The competition is between teams of two javelin throwers.
+                        There are eight teams in total, and each team competes three times.<br> The gladiator fights are held in the arena. The fights are between teams of two gladiators. There are eight teams in total, and each team fights three times.</p>
+                    <span class="timespan">October 7 - 11</span>
+                </div>
+                <div class="attr-front">
+                    <h3>The Great Games of Rome</h3>
+                </div>
+            </div>
         </div>
     </div>
+    <button class="back-to-top">
+        Back to Top
+    </button>
+    <script>
+        document.querySelector(".back-to-top").addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        window.addEventListener("scroll", function() {
+            console.log(window.scrollY);
+            if (window.scrollY > 500) {
+                document.querySelector(".back-to-top").style.opacity = "1";
+            } else {
+                document.querySelector(".back-to-top").style.opacity = "0";
+            }
+        });
+    </script>
     <footer>
+        <div class="brand">
+            <div>
+                <h2>Travel Nîmes</h2>
+                <p>Have fun your <strong>own</strong> way.</p>
+            </div>
 
+
+        </div>
+        <ul>
+            <li>
+                <h2>Explore</h2>
+            </li>
+            <li>
+                <span data-href="../index.html">Home</span>
+            </li>
+            <li>
+                <span data-href="../museums">Museums</span>
+            </li>
+            <li>
+                <span data-href="../attractions">Attractions</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h2>Follow</h2>
+            </li>
+            <li><img class="icon" src="../assets/facebook.png" alt=""><a href="https://facebook.com/user/TravelNimes">TravelNimes</a></li>
+            <li><img class="icon" src="../assets/twitter.png" alt=""><a href="https://twitter.com/@TravelNimesFrance">@TravelNimesFrance</a></li>
+            <li><img class="icon" src="../assets/instagram.png" alt=""><a href="https://twitter.com/@TravelNimes">@TravelNimes</a></li>
+
+
+        </ul>
+        <ul>
+            <li>
+                <h2>Legal</h2>
+            </li>
+            <li>
+                <span data-href="../legal/terms.html">Terms of Use</span>
+            </li>
+            <li>
+                <span data-href="../legal/privacy.html">Privacy Policy</span>
+            </li>
+            <li>
+
+                <span>&copy; 1984-2022 TravelNimes</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h2>Stay Connected</h2>
+            </li>
+            <li>
+                <div id="signup">
+                    <input type="text" placeholder="Get the weekly news"><button id="su">Sign Up</button>
+                </div>
+            </li>
+        </ul>
     </footer>
     <script src="./js/data_href.js"></script>
 </body>

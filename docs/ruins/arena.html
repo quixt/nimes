@@ -11,15 +11,67 @@
     <link rel="stylesheet" href="../css/ruins.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body>
     <section id="logo">
-        <img src="../assets/logo.png" alt="Travel Nimes Logo" data-href="/">
+        <img src="../assets/logo.png" alt="Travel Nimes Logo" data-href="../index.html">
     </section>
     <nav>
+        <div id="ruins" class="nav-dropdown">
+            <h3 class="nav-text">Ruins</h3>
+            <div class="nav-dropdown-content nav-split">
+                <div class="list">
+                    <a href="../ruins/arena.html" onmouseover="setDesc(this);" data-src="../assets/arena.jpg" data-desc="A Roman ampitheatre built in the second century BCE, it is one of the best preserved in the world.">Arena of Nîmes</a>
+                    <a href="../ruins/maison-carree.html" onmouseover="setDesc(this);" data-src="../assets/maisoncarree.jpeg" data-desc="The Maison Carrée is the most well-kept Roman temple in France. Created long ago, it is beautiful and a prime example of Vitruvian artwork. ">Maison Carrée
+                </a>
+                    <a href="../ruins/pont-du-gard.html" onmouseover="setDesc(this);" data-src="../assets/pontdugard2.jpg" data-desc="The Pont du Gard is a beautiful and well-preserved Roman aqueduct from long ago.  The aqueduct has been graffitied by Napoleon's army.">Pont du Gard</a>
+                </div>
+                <div class="info">
+                    <section>
+                        <img class="info-img" src="">
+                        <p class="info-desc">
 
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div id="museums" class="nav-dropdown">
+            <h3 class="nav-text">Museums</h3>
+            <div class="nav-dropdown-content nav-split">
+                <div class="list">
+                    <a href="../museums/musee-romanite.html" onmouseover="setDesc2(this);" data-src="../assets/museeromanite.jpg" data-desc="A newly opened modern museum showcasing old Roman artifacts.">Musée de<br>la Romanité</a>
+                    <a href="../museums/musee-beaux.html" onmouseover="setDesc2(this);" data-src="../assets/museeb.jpg" data-desc="An art museum containing busts, paintings, and more from a private collection, stored in a stunningly beautiful house designed for it.">Musée des<br>Beaux-Arts
+        
+        
+                    </a>
+                    <a href="../museums/carre-d-art.html" onmouseover="setDesc2(this);" data-src="../assets/musee-carree.jpg" data-desc="A museum displaying contemprary French art right across from the Maison Carrée, this is a must see for any art lover.">Carré d'Art</a>
+                </div>
+                <div class="info">
+                    <section>
+                        <img class="info-img" src="">
+                        <p class="info-desc">
+
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <a class="nav-link" href="../attractions">
+            <h3 class="nav-text">Attractions</h3>
+        </a>
+        <a class="nav-link" href="../events">
+            <h3 class="nav-text">Events</h3>
+        </a>
+        <a class="nav-link" href="../../../zack_albright/final country website. tokyo/index.html">
+            <h3 class="nav-text">Culture</h3>
+        </a>
+
+        <script src="../js/info.js"></script>
     </nav>
     <div class="grey-bar"></div>
     <header style="background-image: url(../assets/carousel1.jpg);">
@@ -27,23 +79,9 @@
         <h1>Arena of Nîmes</h1>
     </header>
     <div class="grey-bar"></div>
-    <script>
-        $(function() {
-            $("nav").load("../nav.html");
-            $("footer").load("../footer.html");
-        });
-    </script>
+
     <section class="info-split">
-        <section>
-            <div id="carousel" style="background-image: url(../assets/arena1.jpg);">
-                <span class="switch-button left" onclick="prev();">
-                    &#10094;
-                </span>
-                <span class="switch-button right" onclick="next();">
-                    &#10095;
-                </span>
-            </div>
-        </section>
+
         <section>
             <p class="desc">
                 Roman amphitheatres first appeared in Southern Italy in the second century BCE and were specifically designed for putting on spectacular combats between gladiators or animal fights, this new type of construction took the form of two theatres set face
@@ -53,13 +91,19 @@
             </p>
             <div class="hr"></div>
             <p class="desc">
-                The Arena of Nîmes was built in the second century BCE, it is one of the best preserved in the world. Originallty built for entertainment, it was later repurposed as a fortess and withstood many sieges.</p>
+                Nimes is a city in the South of France with a rich history. The Arena of Nimes is a well-preserved Roman amphitheatre that was built in the 1st century AD. It is one of the best-preserved Roman monuments in France and is still used today for bullfights
+                and concerts. The arena has a capacity of 24,000 people. The first recorded games in the arena were held in the 3rd century AD. The arena was built to be a multi-purpose venue for sporting events, public speeches, and plays. It was used
+                for gladiator fights, animal hunts, and executions. In the 5th century, the arena was closed after the Roman empire fell. It was then used as a quarry for stone and a cemetery. In the 18th century, the arena was rediscovered and restored.
+                It is now one of the most popular tourist attractions in Nimes. The arena is a symbol of the city and its Roman past. It is also a reminder of the city's vibrant present and its future.</p>
 
         </section>
-    </section>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4438.5916437424!2d4.362291239413986!3d43.833640117182185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b42d099c473107%3A0x27a2fad19108940f!2sAmphitheatre%20of%20N%C3%AEmes!5e0!3m2!1sen!2sus!4v1653501919019!5m2!1sen!2sus"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <div id="sample-imgs">
+        <img src="../assets/arena1.jpg" alt="The outside front of the Arena of Nimes">
+        <img src="../assets/arena2.jpg" alt="An aerial view of the arena showing red-tiled roofs in the background">
+        <img src="../assets/arena3.jpg" alt="A sandy ampitheatre ring surrounded by old stone seats in the Arena of Nimes">
+    </div>
     <div class="prices">
         <h4>Tickets:</h4> Full Price: <span class="price">10€</span> | 7-17 Years Old: <span class="price">5€</span>
         <h4>Parking:</h4> <span class="price">Inapplicable</span>
@@ -67,8 +111,6 @@
     </div>
 
     <script src="../js/info.js"></script>
-    <script src="../js/carousel.js">
-    </script>
     <section class="ratings">
         <div id="reviews">
             <div id="final-rating">
@@ -84,18 +126,88 @@
             <div id="star-container">
 
             </div>
-            <textarea id="comment" placeholder="Leave a comment..." maxlength="1000" rows="8"></textarea>
-            <button id="leave-comment" type="submit">Leave Comment</button>
+            <button id="leave-comment" type="submit">Review</button>
         </div>
     </section>
-    <section id="comments">
-        <span id="no-comments">No Posts</span>
-    </section>
+    <button class="back-to-top">
+        Back to Top
+    </button>
+    <script>
+        document.querySelector(".back-to-top").addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        window.addEventListener("scroll", function() {
+            console.log(window.scrollY);
+            if (window.scrollY > 500) {
+                document.querySelector(".back-to-top").style.opacity = "1";
+            } else {
+                document.querySelector(".back-to-top").style.opacity = "0";
+            }
+        });
+    </script>
     <footer>
+        <div class="brand">
+            <div>
+                <h2>Travel Nîmes</h2>
+                <p>Have fun your <strong>own</strong> way.</p>
+            </div>
 
+
+        </div>
+        <ul>
+            <li>
+                <h2>Explore</h2>
+            </li>
+            <li>
+                <span data-href="../index.html">Home</span>
+            </li>
+            <li>
+                <span data-href="../museums">Museums</span>
+            </li>
+            <li>
+                <span data-href="../attractions">Attractions</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h2>Follow</h2>
+            </li>
+            <li><img class="icon" src="../assets/facebook.png" alt=""><a href="https://facebook.com/user/TravelNimes">TravelNimes</a></li>
+            <li><img class="icon" src="../assets/twitter.png" alt=""><a href="https://twitter.com/@TravelNimesFrance">@TravelNimesFrance</a></li>
+            <li><img class="icon" src="../assets/instagram.png" alt=""><a href="https://twitter.com/@TravelNimes">@TravelNimes</a></li>
+
+
+        </ul>
+        <ul>
+            <li>
+                <h2>Legal</h2>
+            </li>
+            <li>
+                <span data-href="../legal/terms.html">Terms of Use</span>
+            </li>
+            <li>
+                <span data-href="../legal/privacy.html">Privacy Policy</span>
+            </li>
+            <li>
+
+                <span>&copy; 1984-2022 TravelNimes</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h2>Stay Connected</h2>
+            </li>
+            <li>
+                <div id="signup">
+                    <input type="text" placeholder="Get the weekly news"><button id="su">Sign Up</button>
+                </div>
+            </li>
+        </ul>
     </footer>
     <script>
-        const images = ["arena1.jpg", "arena2.jpg", "arena3.jpg", "arena4.jpg"];
     </script>
     <script src="../js/data_href.js"></script>
     <script src="../js/rating.js"></script>
